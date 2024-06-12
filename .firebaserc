@@ -1,5 +1,8 @@
 {
   "projects": {
     "default": "dynamic-link-54752"
-  }
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

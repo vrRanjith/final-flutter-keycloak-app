@@ -26,9 +26,6 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      routes: {
-        '/': (_) => WelcomePage(),
-      },
       home: WelcomePage(), // Display the WelcomePage as the initial screen
     );
   }
@@ -70,7 +67,7 @@ class WelcomePage extends StatelessWidget {
   // Modified: Function to launch the Keycloak URL for login
   _launchURL(BuildContext context) async {
     final url =
-        'https://sso.sandbox.kezel.io/realms/kezel/protocol/openid-connect/auth?client_id=kezel&redirect_uri=https://dynamic-link-54752.web.app/&response_type=code&scope=openid%20profile%20email';
+        'https://sso.sandbox.kezel.io/realms/kezel/protocol/openid-connect/auth?client_id=kezel&redirect_uri=https://dynamic-link-54752.web.app&response_type=code&scope=openid%20profile%20email';
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri);
